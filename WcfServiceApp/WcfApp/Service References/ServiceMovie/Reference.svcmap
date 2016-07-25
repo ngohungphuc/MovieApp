@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d597e835-67a7-46f9-a09c-93126efbaf9d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1692/ServiceMovies.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceMovies.wsdl" MetadataType="Wsdl" ID="4e6d706c-59c3-466b-b850-cbe4d9e13d69" SourceId="1" SourceUrl="http://localhost:1692/ServiceMovies.svc?wsdl" />
+    <MetadataFile FileName="ServiceMovies.xsd" MetadataType="Schema" ID="acd5f18d-c3e0-4cce-8c52-efc59b30dd13" SourceId="1" SourceUrl="http://localhost:1692/ServiceMovies.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceMovies1.xsd" MetadataType="Schema" ID="6992a7ff-deaa-441e-a2fa-c0713eb60e0b" SourceId="1" SourceUrl="http://localhost:1692/ServiceMovies.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceMovies2.xsd" MetadataType="Schema" ID="a01a079d-3ee7-4a21-9b31-5662bdeddb39" SourceId="1" SourceUrl="http://localhost:1692/ServiceMovies.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceMovies.disco" MetadataType="Disco" ID="23985647-da80-44ac-91dd-144394406871" SourceId="1" SourceUrl="http://localhost:1692/ServiceMovies.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

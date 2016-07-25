@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfServiceApp" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfServiceApp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfLichChieu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LichChieu" nillable="true" type="tns:LichChieu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLichChieu" nillable="true" type="tns:ArrayOfLichChieu" />
+  <xs:complexType name="LichChieu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Ngay_bat_dau" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Ngay_ket_thuc" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ThoiGian" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LichChieu" nillable="true" type="tns:LichChieu" />
+</xs:schema>

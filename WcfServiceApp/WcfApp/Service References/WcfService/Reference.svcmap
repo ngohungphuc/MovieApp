@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5de9c65e-ec30-487c-9eb9-b9dd09e3840c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1692/ServiceCongTy.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceCongTy.xsd" MetadataType="Schema" ID="7bce2513-ef33-45d2-8fad-5b7852db5514" SourceId="1" SourceUrl="http://localhost:1692/ServiceCongTy.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceCongTy1.xsd" MetadataType="Schema" ID="6f576a6a-f34e-4a6e-881c-b6b498752ee6" SourceId="1" SourceUrl="http://localhost:1692/ServiceCongTy.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceCongTy.wsdl" MetadataType="Wsdl" ID="f4ade6e4-8b47-4a23-9107-177fef271535" SourceId="1" SourceUrl="http://localhost:1692/ServiceCongTy.svc?wsdl" />
+    <MetadataFile FileName="ServiceCongTy2.xsd" MetadataType="Schema" ID="806ba02e-d123-4636-927c-a734618acdeb" SourceId="1" SourceUrl="http://localhost:1692/ServiceCongTy.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceCongTy.disco" MetadataType="Disco" ID="f6c9fe1d-9462-4fcc-a3a2-a4d6c44b48cb" SourceId="1" SourceUrl="http://localhost:1692/ServiceCongTy.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

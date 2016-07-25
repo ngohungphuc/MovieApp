@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="84a1e28c-4cf5-4b9e-a479-d306563ac5ea" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1692/ServiceLichChieu.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceLichChieu.xsd" MetadataType="Schema" ID="20e061b6-da4b-4ab4-bb89-e1da60de239a" SourceId="1" SourceUrl="http://localhost:1692/ServiceLichChieu.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceLichChieu.disco" MetadataType="Disco" ID="fbe40786-4938-4071-9c5a-f8a80dd5a283" SourceId="1" SourceUrl="http://localhost:1692/ServiceLichChieu.svc?disco" />
+    <MetadataFile FileName="ServiceLichChieu.wsdl" MetadataType="Wsdl" ID="15670a42-b6a6-4fce-9904-94d6c25f69f2" SourceId="1" SourceUrl="http://localhost:1692/ServiceLichChieu.svc?wsdl" />
+    <MetadataFile FileName="ServiceLichChieu1.xsd" MetadataType="Schema" ID="2df64c5b-5897-4a0d-9d31-a59e5d4fdc4d" SourceId="1" SourceUrl="http://localhost:1692/ServiceLichChieu.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceLichChieu2.xsd" MetadataType="Schema" ID="364917f7-6387-4e32-b6ff-07be55118643" SourceId="1" SourceUrl="http://localhost:1692/ServiceLichChieu.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

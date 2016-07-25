@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="921c5bad-2bf6-457f-83c5-c4be5d7350a6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1692/ServiceDangNhap.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceDangNhap.wsdl" MetadataType="Wsdl" ID="2ebc69a2-e5eb-4e9b-a549-faecfe50333c" SourceId="1" SourceUrl="http://localhost:1692/ServiceDangNhap.svc?wsdl" />
+    <MetadataFile FileName="ServiceDangNhap.disco" MetadataType="Disco" ID="3a7e9508-a79d-4ae5-a32d-0e447eaae597" SourceId="1" SourceUrl="http://localhost:1692/ServiceDangNhap.svc?disco" />
+    <MetadataFile FileName="ServiceDangNhap.xsd" MetadataType="Schema" ID="57e54aef-0453-4842-8b9e-141fa90ea1c3" SourceId="1" SourceUrl="http://localhost:1692/ServiceDangNhap.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceDangNhap1.xsd" MetadataType="Schema" ID="57ee8b22-eb1e-482d-8ae6-4379f3d03739" SourceId="1" SourceUrl="http://localhost:1692/ServiceDangNhap.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceDangNhap2.xsd" MetadataType="Schema" ID="0848e726-6af2-4b63-aa47-e066a50bfa10" SourceId="1" SourceUrl="http://localhost:1692/ServiceDangNhap.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

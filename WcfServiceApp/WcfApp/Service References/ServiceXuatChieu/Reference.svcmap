@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5c649d68-7ad1-495c-bc47-5b5c9e66a7e9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1692/ServiceXuatChieu.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceXuatChieu.xsd" MetadataType="Schema" ID="8a809512-40ed-4df0-b2d6-b0b09ae27b3b" SourceId="1" SourceUrl="http://localhost:1692/ServiceXuatChieu.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceXuatChieu.wsdl" MetadataType="Wsdl" ID="bd70763b-7483-4187-adb2-634968293b8f" SourceId="1" SourceUrl="http://localhost:1692/ServiceXuatChieu.svc?wsdl" />
+    <MetadataFile FileName="ServiceXuatChieu1.xsd" MetadataType="Schema" ID="fc65f738-5783-40a2-a89e-8580bd49ee27" SourceId="1" SourceUrl="http://localhost:1692/ServiceXuatChieu.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceXuatChieu.disco" MetadataType="Disco" ID="747d9239-f6ba-4f3a-91cd-104b6d6938b1" SourceId="1" SourceUrl="http://localhost:1692/ServiceXuatChieu.svc?disco" />
+    <MetadataFile FileName="ServiceXuatChieu2.xsd" MetadataType="Schema" ID="093f1036-6e03-4651-acff-3d9d528c436a" SourceId="1" SourceUrl="http://localhost:1692/ServiceXuatChieu.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

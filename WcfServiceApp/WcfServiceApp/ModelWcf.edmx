@@ -1,0 +1,742 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="wcfmodel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BAO_GOM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_LICH_CHIEU" Type="int" Nullable="false" />
+          <Property Name="ID_PHIM" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CA_CHIEU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Gio_bat_dau" Type="int" Nullable="false" />
+          <Property Name="Phut_bat_dau" Type="int" Nullable="false" />
+          <Property Name="So_phut" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CONG_TY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ten" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Dien_thoai" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Dia_chi" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="So_tuan_lap_lich" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GHE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="x" Type="int" Nullable="false" />
+          <Property Name="y" Type="int" Nullable="false" />
+          <Property Name="ID_PHONG" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LICH_CHIEU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ngay_bat_dau" Type="datetime" Nullable="false" />
+          <Property Name="Ngay_ket_thuc" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NGUOI_DUNG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ten" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mat_khau" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ID_NHOM_NGUOI_DUNG" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NHOM_NGUOI_DUNG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ten" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Ma_so" Type="nvarchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PHIM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ten" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Dao_dien" Type="nvarchar" MaxLength="30" />
+          <Property Name="Dien_vien" Type="nvarchar" MaxLength="100" />
+          <Property Name="The_loai" Type="nvarchar" MaxLength="30" />
+          <Property Name="Phien_ban" Type="nvarchar" MaxLength="30" />
+          <Property Name="Hang_phim" Type="nvarchar" MaxLength="50" />
+          <Property Name="Nuoc_san_xuat" Type="nvarchar" MaxLength="30" />
+          <Property Name="Do_dai" Type="int" Nullable="false" />
+          <Property Name="Poster" Type="varchar" MaxLength="30" />
+          <Property Name="Gioi_thieu" Type="nvarchar(max)" />
+          <Property Name="Trailer" Type="varchar" MaxLength="50" />
+          <Property Name="PDF" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PHONG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ten" Type="nvarchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Trang_thai" Type="bit" Nullable="false" />
+          <Property Name="ID_XUAT_CHIEU" Type="int" Nullable="false" />
+          <Property Name="ID_GHE" Type="int" Nullable="false" />
+          <Property Name="Gia_tien" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="ID_NGUOI_DUNG" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="XUAT_CHIEU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ngay" Type="datetime" Nullable="false" />
+          <Property Name="ID_LICH_CHIEU" Type="int" Nullable="false" />
+          <Property Name="ID_CA_CHIEU" Type="int" Nullable="false" />
+          <Property Name="ID_PHONG" Type="int" Nullable="false" />
+          <Property Name="ID_PHIM" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_BAO_GOM_LICH_CHIEU">
+          <End Role="LICH_CHIEU" Type="Self.LICH_CHIEU" Multiplicity="1" />
+          <End Role="BAO_GOM" Type="Self.BAO_GOM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LICH_CHIEU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BAO_GOM">
+              <PropertyRef Name="ID_LICH_CHIEU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BAO_GOM_PHIM">
+          <End Role="PHIM" Type="Self.PHIM" Multiplicity="1" />
+          <End Role="BAO_GOM" Type="Self.BAO_GOM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHIM">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BAO_GOM">
+              <PropertyRef Name="ID_PHIM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GHE_PHONG">
+          <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
+          <End Role="GHE" Type="Self.GHE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHONG">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GHE">
+              <PropertyRef Name="ID_PHONG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NGUOI_DUNG_NHOM_NGUOI_DUNG">
+          <End Role="NHOM_NGUOI_DUNG" Type="Self.NHOM_NGUOI_DUNG" Multiplicity="1" />
+          <End Role="NGUOI_DUNG" Type="Self.NGUOI_DUNG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHOM_NGUOI_DUNG">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="NGUOI_DUNG">
+              <PropertyRef Name="ID_NHOM_NGUOI_DUNG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VE_GHE">
+          <End Role="GHE" Type="Self.GHE" Multiplicity="1" />
+          <End Role="VE" Type="Self.VE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GHE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VE">
+              <PropertyRef Name="ID_GHE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VE_XUAT_CHIEU">
+          <End Role="XUAT_CHIEU" Type="Self.XUAT_CHIEU" Multiplicity="1" />
+          <End Role="VE" Type="Self.VE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="XUAT_CHIEU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VE">
+              <PropertyRef Name="ID_XUAT_CHIEU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_XUAT_CHIEU_CA_CHIEU">
+          <End Role="CA_CHIEU" Type="Self.CA_CHIEU" Multiplicity="1" />
+          <End Role="XUAT_CHIEU" Type="Self.XUAT_CHIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CA_CHIEU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="XUAT_CHIEU">
+              <PropertyRef Name="ID_CA_CHIEU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_XUAT_CHIEU_LICH_CHIEU">
+          <End Role="LICH_CHIEU" Type="Self.LICH_CHIEU" Multiplicity="1" />
+          <End Role="XUAT_CHIEU" Type="Self.XUAT_CHIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LICH_CHIEU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="XUAT_CHIEU">
+              <PropertyRef Name="ID_LICH_CHIEU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_XUAT_CHIEU_PHIM">
+          <End Role="PHIM" Type="Self.PHIM" Multiplicity="1" />
+          <End Role="XUAT_CHIEU" Type="Self.XUAT_CHIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHIM">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="XUAT_CHIEU">
+              <PropertyRef Name="ID_PHIM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_XUAT_CHIEU_PHONG">
+          <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
+          <End Role="XUAT_CHIEU" Type="Self.XUAT_CHIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHONG">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="XUAT_CHIEU">
+              <PropertyRef Name="ID_PHONG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="wcfmodelStoreContainer">
+          <EntitySet Name="BAO_GOM" EntityType="Self.BAO_GOM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CA_CHIEU" EntityType="Self.CA_CHIEU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CONG_TY" EntityType="Self.CONG_TY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GHE" EntityType="Self.GHE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LICH_CHIEU" EntityType="Self.LICH_CHIEU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NGUOI_DUNG" EntityType="Self.NGUOI_DUNG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NHOM_NGUOI_DUNG" EntityType="Self.NHOM_NGUOI_DUNG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PHIM" EntityType="Self.PHIM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PHONG" EntityType="Self.PHONG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VE" EntityType="Self.VE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="XUAT_CHIEU" EntityType="Self.XUAT_CHIEU" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_BAO_GOM_LICH_CHIEU" Association="Self.FK_BAO_GOM_LICH_CHIEU">
+            <End Role="LICH_CHIEU" EntitySet="LICH_CHIEU" />
+            <End Role="BAO_GOM" EntitySet="BAO_GOM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BAO_GOM_PHIM" Association="Self.FK_BAO_GOM_PHIM">
+            <End Role="PHIM" EntitySet="PHIM" />
+            <End Role="BAO_GOM" EntitySet="BAO_GOM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GHE_PHONG" Association="Self.FK_GHE_PHONG">
+            <End Role="PHONG" EntitySet="PHONG" />
+            <End Role="GHE" EntitySet="GHE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NGUOI_DUNG_NHOM_NGUOI_DUNG" Association="Self.FK_NGUOI_DUNG_NHOM_NGUOI_DUNG">
+            <End Role="NHOM_NGUOI_DUNG" EntitySet="NHOM_NGUOI_DUNG" />
+            <End Role="NGUOI_DUNG" EntitySet="NGUOI_DUNG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VE_GHE" Association="Self.FK_VE_GHE">
+            <End Role="GHE" EntitySet="GHE" />
+            <End Role="VE" EntitySet="VE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VE_XUAT_CHIEU" Association="Self.FK_VE_XUAT_CHIEU">
+            <End Role="XUAT_CHIEU" EntitySet="XUAT_CHIEU" />
+            <End Role="VE" EntitySet="VE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_XUAT_CHIEU_CA_CHIEU" Association="Self.FK_XUAT_CHIEU_CA_CHIEU">
+            <End Role="CA_CHIEU" EntitySet="CA_CHIEU" />
+            <End Role="XUAT_CHIEU" EntitySet="XUAT_CHIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_XUAT_CHIEU_LICH_CHIEU" Association="Self.FK_XUAT_CHIEU_LICH_CHIEU">
+            <End Role="LICH_CHIEU" EntitySet="LICH_CHIEU" />
+            <End Role="XUAT_CHIEU" EntitySet="XUAT_CHIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_XUAT_CHIEU_PHIM" Association="Self.FK_XUAT_CHIEU_PHIM">
+            <End Role="PHIM" EntitySet="PHIM" />
+            <End Role="XUAT_CHIEU" EntitySet="XUAT_CHIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_XUAT_CHIEU_PHONG" Association="Self.FK_XUAT_CHIEU_PHONG">
+            <End Role="PHONG" EntitySet="PHONG" />
+            <End Role="XUAT_CHIEU" EntitySet="XUAT_CHIEU" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="wcfmodel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BAO_GOM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_LICH_CHIEU" Type="Int32" Nullable="false" />
+          <Property Name="ID_PHIM" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="LICH_CHIEU" Relationship="Self.FK_BAO_GOM_LICH_CHIEU" FromRole="BAO_GOM" ToRole="LICH_CHIEU" />
+          <NavigationProperty Name="PHIM" Relationship="Self.FK_BAO_GOM_PHIM" FromRole="BAO_GOM" ToRole="PHIM" />
+        </EntityType>
+        <EntityType Name="CA_CHIEU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Gio_bat_dau" Type="Int32" Nullable="false" />
+          <Property Name="Phut_bat_dau" Type="Int32" Nullable="false" />
+          <Property Name="So_phut" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="XUAT_CHIEU" Relationship="Self.FK_XUAT_CHIEU_CA_CHIEU" FromRole="CA_CHIEU" ToRole="XUAT_CHIEU" />
+        </EntityType>
+        <EntityType Name="CONG_TY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ten" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Dien_thoai" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Dia_chi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="So_tuan_lap_lich" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GHE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="x" Type="Int32" Nullable="false" />
+          <Property Name="y" Type="Int32" Nullable="false" />
+          <Property Name="ID_PHONG" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PHONG" Relationship="Self.FK_GHE_PHONG" FromRole="GHE" ToRole="PHONG" />
+          <NavigationProperty Name="VEs" Relationship="Self.FK_VE_GHE" FromRole="GHE" ToRole="VE" />
+        </EntityType>
+        <EntityType Name="LICH_CHIEU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ngay_bat_dau" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Ngay_ket_thuc" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="BAO_GOM" Relationship="Self.FK_BAO_GOM_LICH_CHIEU" FromRole="LICH_CHIEU" ToRole="BAO_GOM" />
+          <NavigationProperty Name="XUAT_CHIEU" Relationship="Self.FK_XUAT_CHIEU_LICH_CHIEU" FromRole="LICH_CHIEU" ToRole="XUAT_CHIEU" />
+        </EntityType>
+        <EntityType Name="NGUOI_DUNG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mat_khau" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_NHOM_NGUOI_DUNG" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="NHOM_NGUOI_DUNG" Relationship="Self.FK_NGUOI_DUNG_NHOM_NGUOI_DUNG" FromRole="NGUOI_DUNG" ToRole="NHOM_NGUOI_DUNG" />
+        </EntityType>
+        <EntityType Name="NHOM_NGUOI_DUNG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ten" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ma_so" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="NGUOI_DUNG" Relationship="Self.FK_NGUOI_DUNG_NHOM_NGUOI_DUNG" FromRole="NHOM_NGUOI_DUNG" ToRole="NGUOI_DUNG" />
+        </EntityType>
+        <EntityType Name="PHIM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ten" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Dao_dien" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Dien_vien" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="The_loai" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Phien_ban" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Hang_phim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Nuoc_san_xuat" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Do_dai" Type="Int32" Nullable="false" />
+          <Property Name="Poster" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Gioi_thieu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Trailer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PDF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BAO_GOM" Relationship="Self.FK_BAO_GOM_PHIM" FromRole="PHIM" ToRole="BAO_GOM" />
+          <NavigationProperty Name="XUAT_CHIEU" Relationship="Self.FK_XUAT_CHIEU_PHIM" FromRole="PHIM" ToRole="XUAT_CHIEU" />
+        </EntityType>
+        <EntityType Name="PHONG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ten" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="GHEs" Relationship="Self.FK_GHE_PHONG" FromRole="PHONG" ToRole="GHE" />
+          <NavigationProperty Name="XUAT_CHIEU" Relationship="Self.FK_XUAT_CHIEU_PHONG" FromRole="PHONG" ToRole="XUAT_CHIEU" />
+        </EntityType>
+        <EntityType Name="VE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Trang_thai" Type="Boolean" Nullable="false" />
+          <Property Name="ID_XUAT_CHIEU" Type="Int32" Nullable="false" />
+          <Property Name="ID_GHE" Type="Int32" Nullable="false" />
+          <Property Name="Gia_tien" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_NGUOI_DUNG" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="GHE" Relationship="Self.FK_VE_GHE" FromRole="VE" ToRole="GHE" />
+          <NavigationProperty Name="XUAT_CHIEU" Relationship="Self.FK_VE_XUAT_CHIEU" FromRole="VE" ToRole="XUAT_CHIEU" />
+        </EntityType>
+        <EntityType Name="XUAT_CHIEU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ID_LICH_CHIEU" Type="Int32" Nullable="false" />
+          <Property Name="ID_CA_CHIEU" Type="Int32" Nullable="false" />
+          <Property Name="ID_PHONG" Type="Int32" Nullable="false" />
+          <Property Name="ID_PHIM" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CA_CHIEU" Relationship="Self.FK_XUAT_CHIEU_CA_CHIEU" FromRole="XUAT_CHIEU" ToRole="CA_CHIEU" />
+          <NavigationProperty Name="LICH_CHIEU" Relationship="Self.FK_XUAT_CHIEU_LICH_CHIEU" FromRole="XUAT_CHIEU" ToRole="LICH_CHIEU" />
+          <NavigationProperty Name="PHIM" Relationship="Self.FK_XUAT_CHIEU_PHIM" FromRole="XUAT_CHIEU" ToRole="PHIM" />
+          <NavigationProperty Name="PHONG" Relationship="Self.FK_XUAT_CHIEU_PHONG" FromRole="XUAT_CHIEU" ToRole="PHONG" />
+          <NavigationProperty Name="VEs" Relationship="Self.FK_VE_XUAT_CHIEU" FromRole="XUAT_CHIEU" ToRole="VE" />
+        </EntityType>
+        <Association Name="FK_BAO_GOM_LICH_CHIEU">
+          <End Role="LICH_CHIEU" Type="Self.LICH_CHIEU" Multiplicity="1" />
+          <End Role="BAO_GOM" Type="Self.BAO_GOM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LICH_CHIEU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BAO_GOM">
+              <PropertyRef Name="ID_LICH_CHIEU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BAO_GOM_PHIM">
+          <End Role="PHIM" Type="Self.PHIM" Multiplicity="1" />
+          <End Role="BAO_GOM" Type="Self.BAO_GOM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHIM">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BAO_GOM">
+              <PropertyRef Name="ID_PHIM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_XUAT_CHIEU_CA_CHIEU">
+          <End Role="CA_CHIEU" Type="Self.CA_CHIEU" Multiplicity="1" />
+          <End Role="XUAT_CHIEU" Type="Self.XUAT_CHIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CA_CHIEU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="XUAT_CHIEU">
+              <PropertyRef Name="ID_CA_CHIEU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GHE_PHONG">
+          <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
+          <End Role="GHE" Type="Self.GHE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHONG">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="GHE">
+              <PropertyRef Name="ID_PHONG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VE_GHE">
+          <End Role="GHE" Type="Self.GHE" Multiplicity="1" />
+          <End Role="VE" Type="Self.VE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GHE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VE">
+              <PropertyRef Name="ID_GHE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_XUAT_CHIEU_LICH_CHIEU">
+          <End Role="LICH_CHIEU" Type="Self.LICH_CHIEU" Multiplicity="1" />
+          <End Role="XUAT_CHIEU" Type="Self.XUAT_CHIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LICH_CHIEU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="XUAT_CHIEU">
+              <PropertyRef Name="ID_LICH_CHIEU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NGUOI_DUNG_NHOM_NGUOI_DUNG">
+          <End Role="NHOM_NGUOI_DUNG" Type="Self.NHOM_NGUOI_DUNG" Multiplicity="1" />
+          <End Role="NGUOI_DUNG" Type="Self.NGUOI_DUNG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHOM_NGUOI_DUNG">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="NGUOI_DUNG">
+              <PropertyRef Name="ID_NHOM_NGUOI_DUNG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_XUAT_CHIEU_PHIM">
+          <End Role="PHIM" Type="Self.PHIM" Multiplicity="1" />
+          <End Role="XUAT_CHIEU" Type="Self.XUAT_CHIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHIM">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="XUAT_CHIEU">
+              <PropertyRef Name="ID_PHIM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_XUAT_CHIEU_PHONG">
+          <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
+          <End Role="XUAT_CHIEU" Type="Self.XUAT_CHIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHONG">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="XUAT_CHIEU">
+              <PropertyRef Name="ID_PHONG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VE_XUAT_CHIEU">
+          <End Role="XUAT_CHIEU" Type="Self.XUAT_CHIEU" Multiplicity="1" />
+          <End Role="VE" Type="Self.VE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="XUAT_CHIEU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VE">
+              <PropertyRef Name="ID_XUAT_CHIEU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="WcfDbContext" annotation:LazyLoadingEnabled="false">
+          <EntitySet Name="BAO_GOM" EntityType="Self.BAO_GOM" />
+          <EntitySet Name="CA_CHIEU" EntityType="Self.CA_CHIEU" />
+          <EntitySet Name="CONG_TY" EntityType="Self.CONG_TY" />
+          <EntitySet Name="GHEs" EntityType="Self.GHE" />
+          <EntitySet Name="LICH_CHIEU" EntityType="Self.LICH_CHIEU" />
+          <EntitySet Name="NGUOI_DUNG" EntityType="Self.NGUOI_DUNG" />
+          <EntitySet Name="NHOM_NGUOI_DUNG" EntityType="Self.NHOM_NGUOI_DUNG" />
+          <EntitySet Name="PHIMs" EntityType="Self.PHIM" />
+          <EntitySet Name="PHONGs" EntityType="Self.PHONG" />
+          <EntitySet Name="VEs" EntityType="Self.VE" />
+          <EntitySet Name="XUAT_CHIEU" EntityType="Self.XUAT_CHIEU" />
+          <AssociationSet Name="FK_BAO_GOM_LICH_CHIEU" Association="Self.FK_BAO_GOM_LICH_CHIEU">
+            <End Role="LICH_CHIEU" EntitySet="LICH_CHIEU" />
+            <End Role="BAO_GOM" EntitySet="BAO_GOM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BAO_GOM_PHIM" Association="Self.FK_BAO_GOM_PHIM">
+            <End Role="PHIM" EntitySet="PHIMs" />
+            <End Role="BAO_GOM" EntitySet="BAO_GOM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_XUAT_CHIEU_CA_CHIEU" Association="Self.FK_XUAT_CHIEU_CA_CHIEU">
+            <End Role="CA_CHIEU" EntitySet="CA_CHIEU" />
+            <End Role="XUAT_CHIEU" EntitySet="XUAT_CHIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GHE_PHONG" Association="Self.FK_GHE_PHONG">
+            <End Role="PHONG" EntitySet="PHONGs" />
+            <End Role="GHE" EntitySet="GHEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VE_GHE" Association="Self.FK_VE_GHE">
+            <End Role="GHE" EntitySet="GHEs" />
+            <End Role="VE" EntitySet="VEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_XUAT_CHIEU_LICH_CHIEU" Association="Self.FK_XUAT_CHIEU_LICH_CHIEU">
+            <End Role="LICH_CHIEU" EntitySet="LICH_CHIEU" />
+            <End Role="XUAT_CHIEU" EntitySet="XUAT_CHIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NGUOI_DUNG_NHOM_NGUOI_DUNG" Association="Self.FK_NGUOI_DUNG_NHOM_NGUOI_DUNG">
+            <End Role="NHOM_NGUOI_DUNG" EntitySet="NHOM_NGUOI_DUNG" />
+            <End Role="NGUOI_DUNG" EntitySet="NGUOI_DUNG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_XUAT_CHIEU_PHIM" Association="Self.FK_XUAT_CHIEU_PHIM">
+            <End Role="PHIM" EntitySet="PHIMs" />
+            <End Role="XUAT_CHIEU" EntitySet="XUAT_CHIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_XUAT_CHIEU_PHONG" Association="Self.FK_XUAT_CHIEU_PHONG">
+            <End Role="PHONG" EntitySet="PHONGs" />
+            <End Role="XUAT_CHIEU" EntitySet="XUAT_CHIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VE_XUAT_CHIEU" Association="Self.FK_VE_XUAT_CHIEU">
+            <End Role="XUAT_CHIEU" EntitySet="XUAT_CHIEU" />
+            <End Role="VE" EntitySet="VEs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="wcfmodelStoreContainer" CdmEntityContainer="WcfDbContext">
+          <EntitySetMapping Name="BAO_GOM">
+            <EntityTypeMapping TypeName="wcfmodel.BAO_GOM">
+              <MappingFragment StoreEntitySet="BAO_GOM">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_LICH_CHIEU" ColumnName="ID_LICH_CHIEU" />
+                <ScalarProperty Name="ID_PHIM" ColumnName="ID_PHIM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CA_CHIEU">
+            <EntityTypeMapping TypeName="wcfmodel.CA_CHIEU">
+              <MappingFragment StoreEntitySet="CA_CHIEU">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Gio_bat_dau" ColumnName="Gio_bat_dau" />
+                <ScalarProperty Name="Phut_bat_dau" ColumnName="Phut_bat_dau" />
+                <ScalarProperty Name="So_phut" ColumnName="So_phut" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CONG_TY">
+            <EntityTypeMapping TypeName="wcfmodel.CONG_TY">
+              <MappingFragment StoreEntitySet="CONG_TY">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="Dien_thoai" ColumnName="Dien_thoai" />
+                <ScalarProperty Name="Dia_chi" ColumnName="Dia_chi" />
+                <ScalarProperty Name="So_tuan_lap_lich" ColumnName="So_tuan_lap_lich" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GHEs">
+            <EntityTypeMapping TypeName="wcfmodel.GHE">
+              <MappingFragment StoreEntitySet="GHE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="x" ColumnName="x" />
+                <ScalarProperty Name="y" ColumnName="y" />
+                <ScalarProperty Name="ID_PHONG" ColumnName="ID_PHONG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LICH_CHIEU">
+            <EntityTypeMapping TypeName="wcfmodel.LICH_CHIEU">
+              <MappingFragment StoreEntitySet="LICH_CHIEU">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ngay_bat_dau" ColumnName="Ngay_bat_dau" />
+                <ScalarProperty Name="Ngay_ket_thuc" ColumnName="Ngay_ket_thuc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NGUOI_DUNG">
+            <EntityTypeMapping TypeName="wcfmodel.NGUOI_DUNG">
+              <MappingFragment StoreEntitySet="NGUOI_DUNG">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="Mat_khau" ColumnName="Mat_khau" />
+                <ScalarProperty Name="ID_NHOM_NGUOI_DUNG" ColumnName="ID_NHOM_NGUOI_DUNG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NHOM_NGUOI_DUNG">
+            <EntityTypeMapping TypeName="wcfmodel.NHOM_NGUOI_DUNG">
+              <MappingFragment StoreEntitySet="NHOM_NGUOI_DUNG">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="Ma_so" ColumnName="Ma_so" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PHIMs">
+            <EntityTypeMapping TypeName="wcfmodel.PHIM">
+              <MappingFragment StoreEntitySet="PHIM">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="Dao_dien" ColumnName="Dao_dien" />
+                <ScalarProperty Name="Dien_vien" ColumnName="Dien_vien" />
+                <ScalarProperty Name="The_loai" ColumnName="The_loai" />
+                <ScalarProperty Name="Phien_ban" ColumnName="Phien_ban" />
+                <ScalarProperty Name="Hang_phim" ColumnName="Hang_phim" />
+                <ScalarProperty Name="Nuoc_san_xuat" ColumnName="Nuoc_san_xuat" />
+                <ScalarProperty Name="Do_dai" ColumnName="Do_dai" />
+                <ScalarProperty Name="Poster" ColumnName="Poster" />
+                <ScalarProperty Name="Gioi_thieu" ColumnName="Gioi_thieu" />
+                <ScalarProperty Name="Trailer" ColumnName="Trailer" />
+                <ScalarProperty Name="PDF" ColumnName="PDF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PHONGs">
+            <EntityTypeMapping TypeName="wcfmodel.PHONG">
+              <MappingFragment StoreEntitySet="PHONG">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VEs">
+            <EntityTypeMapping TypeName="wcfmodel.VE">
+              <MappingFragment StoreEntitySet="VE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Trang_thai" ColumnName="Trang_thai" />
+                <ScalarProperty Name="ID_XUAT_CHIEU" ColumnName="ID_XUAT_CHIEU" />
+                <ScalarProperty Name="ID_GHE" ColumnName="ID_GHE" />
+                <ScalarProperty Name="Gia_tien" ColumnName="Gia_tien" />
+                <ScalarProperty Name="ID_NGUOI_DUNG" ColumnName="ID_NGUOI_DUNG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="XUAT_CHIEU">
+            <EntityTypeMapping TypeName="wcfmodel.XUAT_CHIEU">
+              <MappingFragment StoreEntitySet="XUAT_CHIEU">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="ID_LICH_CHIEU" ColumnName="ID_LICH_CHIEU" />
+                <ScalarProperty Name="ID_CA_CHIEU" ColumnName="ID_CA_CHIEU" />
+                <ScalarProperty Name="ID_PHONG" ColumnName="ID_PHONG" />
+                <ScalarProperty Name="ID_PHIM" ColumnName="ID_PHIM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

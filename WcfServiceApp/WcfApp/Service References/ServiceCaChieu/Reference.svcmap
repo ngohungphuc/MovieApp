@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="55e2601d-46d4-487a-9bc8-042b43809436" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1692/ServiceCaChieu.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceCaChieu.xsd" MetadataType="Schema" ID="7cdc2cc7-f26b-4a1e-b1ed-a4fc79dc4dec" SourceId="1" SourceUrl="http://localhost:1692/ServiceCaChieu.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceCaChieu.wsdl" MetadataType="Wsdl" ID="50ae3b34-4f61-4b60-8d8c-1af2491dcbd7" SourceId="1" SourceUrl="http://localhost:1692/ServiceCaChieu.svc?wsdl" />
+    <MetadataFile FileName="ServiceCaChieu1.xsd" MetadataType="Schema" ID="e5435b27-eb82-430d-96aa-06d7eea0abb0" SourceId="1" SourceUrl="http://localhost:1692/ServiceCaChieu.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceCaChieu.disco" MetadataType="Disco" ID="172f2215-8124-4846-9a48-e1f40e0713b8" SourceId="1" SourceUrl="http://localhost:1692/ServiceCaChieu.svc?disco" />
+    <MetadataFile FileName="ServiceCaChieu2.xsd" MetadataType="Schema" ID="126260f1-3fe0-4cea-a149-547a4a3bc9f0" SourceId="1" SourceUrl="http://localhost:1692/ServiceCaChieu.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

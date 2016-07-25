@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8bdcf9d396bc482e92839477dc27b9a9" Name="Diagram1">
+        <EntityTypeShape EntityType="wcfmodel.BAO_GOM" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcfmodel.CA_CHIEU" Width="1.5" PointX="3.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcfmodel.CONG_TY" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcfmodel.GHE" Width="1.5" PointX="6" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcfmodel.LICH_CHIEU" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcfmodel.NGUOI_DUNG" Width="1.5" PointX="8" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcfmodel.NHOM_NGUOI_DUNG" Width="1.5" PointX="5.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcfmodel.PHIM" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcfmodel.PHONG" Width="1.5" PointX="3.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcfmodel.VE" Width="1.5" PointX="8.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="wcfmodel.XUAT_CHIEU" Width="1.5" PointX="6" PointY="5.125" IsExpanded="true" />
+        <AssociationConnector Association="wcfmodel.FK_BAO_GOM_LICH_CHIEU" ManuallyRouted="false" />
+        <AssociationConnector Association="wcfmodel.FK_BAO_GOM_PHIM" ManuallyRouted="false" />
+        <AssociationConnector Association="wcfmodel.FK_XUAT_CHIEU_CA_CHIEU" ManuallyRouted="false" />
+        <AssociationConnector Association="wcfmodel.FK_GHE_PHONG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcfmodel.FK_VE_GHE" ManuallyRouted="false" />
+        <AssociationConnector Association="wcfmodel.FK_XUAT_CHIEU_LICH_CHIEU" ManuallyRouted="false" />
+        <AssociationConnector Association="wcfmodel.FK_NGUOI_DUNG_NHOM_NGUOI_DUNG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcfmodel.FK_XUAT_CHIEU_PHIM" ManuallyRouted="false" />
+        <AssociationConnector Association="wcfmodel.FK_XUAT_CHIEU_PHONG" ManuallyRouted="false" />
+        <AssociationConnector Association="wcfmodel.FK_VE_XUAT_CHIEU" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bcc22758-af25-4db8-9f44-f2780dbdbf08" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1692/SearchService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SearchService.xsd" MetadataType="Schema" ID="e0f65a1f-e220-4bbe-a7ea-1c7e36986b13" SourceId="1" SourceUrl="http://localhost:1692/SearchService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SearchService.wsdl" MetadataType="Wsdl" ID="3dd2809c-c928-4c6a-82dd-0cb10c96e825" SourceId="1" SourceUrl="http://localhost:1692/SearchService.svc?wsdl" />
+    <MetadataFile FileName="SearchService1.xsd" MetadataType="Schema" ID="c2c016ba-0ea3-402e-91a7-ac507f9becf1" SourceId="1" SourceUrl="http://localhost:1692/SearchService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SearchService.disco" MetadataType="Disco" ID="a2bfa93b-66c6-4d1c-8203-dce68747dc73" SourceId="1" SourceUrl="http://localhost:1692/SearchService.svc?disco" />
+    <MetadataFile FileName="SearchService2.xsd" MetadataType="Schema" ID="7ae5b526-d432-4dfe-80dc-a868d7f2356b" SourceId="1" SourceUrl="http://localhost:1692/SearchService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SearchService3.xsd" MetadataType="Schema" ID="66648aaa-68f5-4eee-80a4-89cfec0a77bc" SourceId="1" SourceUrl="http://localhost:1692/SearchService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
